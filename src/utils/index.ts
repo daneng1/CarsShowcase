@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
@@ -41,8 +42,9 @@ export const deleteSearchParams = (type: string) => {
 };
 
 export async function fetchCars() {
+  const apiKey = process.env.RAPID_API || ''
   const headers = {
-    'X-RapidAPI-Key': '09f3bbe130msh6b0d9dd2a1e82e1p1d5537jsn83292a87bb18',
+    'X-RapidAPI-Key': apiKey,
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
   }
 

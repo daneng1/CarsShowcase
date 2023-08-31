@@ -24,6 +24,8 @@ export interface ButtonProps {
   containerStyles?: string
   handleClick?: MouseEventHandler<HTMLButtonElement>
   btnType?: "button" | "submit"
+  textStyles?: string
+  rightIcon?: string
 }
 
 export interface SearchManufacturerProps {

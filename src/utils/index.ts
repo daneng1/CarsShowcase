@@ -1,3 +1,5 @@
+import { CarProps } from "@/types";
+
 require('dotenv').config();
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
